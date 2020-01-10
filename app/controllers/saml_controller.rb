@@ -13,6 +13,7 @@ class SamlController < ApplicationController
     end
 
     request = OneLogin::RubySaml::Authrequest.new
+    byebug
     redirect_to(request.create(settings))
 
   end
